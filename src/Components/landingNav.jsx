@@ -33,7 +33,7 @@ export default function Nav() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/tentang">
+              <NavLink className="nav-link" activeClassName="active" to="/acara">
                 Tentang Acara
               </NavLink>
             </li>
