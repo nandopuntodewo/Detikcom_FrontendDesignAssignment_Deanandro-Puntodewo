@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function Nav() {
   return (
@@ -28,24 +29,24 @@ export default function Nav() {
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav" style={{ gap: "80px", padding: "5px", textAlign: "center" }}>
             <li className="nav-item" style={{ top:"50px" }}>
-              <NavLink className="nav-link" activeClassName="active" exact to="/">
+              <ScrollLink className="nav-link" smooth={true} duration={500}  to="home">
                 Home
-              </NavLink>
+              </ScrollLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/acara">
+              <ScrollLink className="nav-link" smooth={true} duration={500} to="acara">
                 Tentang Acara
-              </NavLink>
+              </ScrollLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/galeri">
+              <ScrollLink className="nav-link" smooth={true} duration={500} to="galeri">
                 Galeri
-              </NavLink>
+              </ScrollLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/berita">
+              <ScrollLink className="nav-link" smooth={true} duration={500} to="berita">
                 Berita
-              </NavLink>
+              </ScrollLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" activeClassName="active" to="https://event.detik.com/">
