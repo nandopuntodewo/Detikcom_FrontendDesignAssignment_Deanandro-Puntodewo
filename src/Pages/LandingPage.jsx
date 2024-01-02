@@ -8,9 +8,6 @@ import Galeri from "../Components/Galeri";
 import Berita from "../Components/Berita";
 
 function Page() {
-  const goToSlide = (index) => {
-    // your implementation here
-  };
 
   return (
     <>
@@ -18,7 +15,7 @@ function Page() {
       <Home />
       <Acara />
       <Sponsor />
-      <Galeri goToSlide={goToSlide} />
+      <Galeri />
       <Berita />
       <Footer />
     </>

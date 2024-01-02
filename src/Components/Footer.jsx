@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer-section">
-        <div className="footer-container">
+        <section> 
           <img
             src="images/logo-event 3.png"
             alt=""
@@ -58,8 +58,8 @@ const Footer = () => {
           <div className="copyright">
             <p>Copyright @ 2023 detikcom. All right reserved</p>
           </div>
+          </section>
         </div>
-      </div>
     </>
   );
 };

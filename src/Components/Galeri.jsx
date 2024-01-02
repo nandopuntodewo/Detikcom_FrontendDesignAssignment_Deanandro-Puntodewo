@@ -1,95 +1,84 @@
-import React from "react";
+import { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
-const Galeri = ({ goToSlide }) => {
+import slider1 from "/images/slider-1.png";
+import slider2 from "/images/slider-2.png";
+import slider3 from "/images/slider-3.png";
+import slider4 from "/images/slider-4.png";
+
+function Galeri() {
+  const [mainSwiper, setMainSwiper] = useState(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  const images = [slider1, slider2, slider3, slider4];
+
+  const handleImageClick = (index) => {
+    if (mainSwiper && thumbsSwiper) {
+      mainSwiper.slideTo(index);
+      setSelectedImageIndex(index);
+    }
+  };
+
   return (
-    <section id="galeri" style={{ marginBottom: "193px" }}>
-      <section className="sec3">
-        <div>
-          <h1 className="title-sec3">GALERI SUDIRMAN RUN</h1>
-        </div>
-        <div id="carouselExample" className="carousel slide">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src="images/main-picture.png"
-                className="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="images/slider-1 1.png"
-                className="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="images/slider-1 1 (1).png"
-                className="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src="images/main-picture (1).png"
-                className="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="prev"
+    <Container>
+      <div className="galeri" style={{ marginBottom: "193px" }}>
+        <h1 className="text-galeri">GALERI SUDIRMAN RUN 2022</h1>
+        <Row>
+          <Col>
+            <Swiper
+              style={{
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+              modules={[FreeMode, Navigation, Thumbs]}
+              loop={true}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : null}
+              className="mySwiper2"
+              onSwiper={setMainSwiper}
             >
-              <span className="carousel-control-prev-icon" aria-hidden="true" />
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="next"
+              {images.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img src={image} alt={`Slide ${index}`} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Col>
+          <Col className="pt-3">
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              loop={true}
+              spaceBetween={10}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper"
             >
-              <span className="carousel-control-next-icon" aria-hidden="true" />
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-        <div className="thumbnailCarousel mb-9">
-          <div className="thumbnail" onClick={() => goToSlide(0)}>
-            <img
-              src="images/slider-1 1 (2).png"
-              className="rounded mx-auto d-block"
-              alt="..."
-            />
-          </div>
-          <div className="thumbnail1" onClick={() => goToSlide(1)}>
-            <img
-              src="images/slider-1 1 (3).png"
-              className="rounded mx-auto d-block"
-              alt="..."
-            />
-          </div>
-          <div className="thumbnail2" onClick={() => goToSlide(2)}>
-            <img
-              src="images/slider-1 1 (4).png"
-              className="rounded mx-auto d-block"
-              alt="..."
-            />
-          </div>
-          <div className="thumbnail3" onClick={() => goToSlide(3)}>
-            <img
-              src="images/slider-1 1 (5).png"
-              className="rounded mx-auto d-block"
-              alt="..."
-            />
-          </div>
-        </div>
-      </section>
-    </section>
+              {images.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={image}
+                    alt={`Thumbnail ${index}`}
+                    style={{ opacity: selectedImageIndex === index ? 1 : 0.5 }}
+                    onClick={() => handleImageClick(index)}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Col>
+        </Row>
+      </div>
+    </Container>
   );
-};
+}
 
 export default Galeri;

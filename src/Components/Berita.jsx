@@ -25,13 +25,13 @@ const Berita = () => {
             </a>
             <a href="https://health.detik.com/kebugaran/d-7056398/sukses-finish-marathon-di-jakarta-osha-penyandang-autisme-beberkan-prosesnya">
               <img
-                src="images/thumbnail-artikel-1 1 (1).png"
+                src="images/thumbnail-artikel-1.png"
                 className="tmb1"
               />
             </a>
             <a href="https://health.detik.com/kebugaran/d-7056398/sukses-finish-marathon-di-jakarta-osha-penyandang-autisme-beberkan-prosesnya">
               <img
-                src="images/thumbnail-artikel-1 1 (2).png"
+                src="images/thumbnail-artikel-2.png"
                 className="tmb2"
               />
             </a>
@@ -60,17 +60,17 @@ const Berita = () => {
           </div>
           <div className="tmb-artikel">
             <a href="https://health.detik.com/kebugaran/d-7056398/sukses-finish-marathon-di-jakarta-osha-penyandang-autisme-beberkan-prosesnya">
-              <img src="images/thumbnail-artikel-1 1 (3).png" className="tmb" />
+              <img src="images/thumbnail-artikel-3.png" className="tmb" />
             </a>
             <a href="https://health.detik.com/kebugaran/d-7056398/sukses-finish-marathon-di-jakarta-osha-penyandang-autisme-beberkan-prosesnya">
               <img
-                src="images/thumbnail-artikel-1 1 (4).png"
+                src="images/thumbnail-artikel-4.png"
                 className="tmb1"
               />
             </a>
             <a href="https://health.detik.com/kebugaran/d-7056398/sukses-finish-marathon-di-jakarta-osha-penyandang-autisme-beberkan-prosesnya">
               <img
-                src="images/thumbnail-artikel-1 1 (5).png"
+                src="images/thumbnail-artikel-5.png"
                 className="tmb2"
               />
             </a>
