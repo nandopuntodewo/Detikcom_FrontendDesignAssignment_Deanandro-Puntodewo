@@ -22,7 +22,7 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <div className="footer-container-title text-center  ">
+              <div className="footer-container-title text-center">
                 <p>Connect With Us</p>
               </div>
               <div className="d-flex logo-style">

@@ -40,7 +40,9 @@ const Acara = () => {
                 </h5>
               </div>
               <div className="box4 element-with-gradient-bg">
+              <div className="zoom-effect-2">
                 <img src="images/performance.png" className="ran" />
+                </div>
                 <div>
                   <h1>SPECIAL PERFORMANCE</h1>
                   <h5>
