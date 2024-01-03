@@ -2,7 +2,7 @@ import React from "react";
 
 const Berita = () => {
   return (
-    <section id="berita">
+    <section id="berita" >
       <section className="sec4">
         <div className="title-sec4">
           <h1>ARTIKEL TERKAIT</h1>

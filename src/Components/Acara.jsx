@@ -8,7 +8,13 @@ const Acara = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="box1 element-with-gradient-bg">
-                <img src="images/map.png" className="peta" />
+              <div className="zoom-effect">
+                  <img
+                    src="images/map.png"
+                    className="peta img-fluid hoverable"
+                    alt="Peta"
+                  />
+                </div>
                 <h1>10K FUN RUN</h1>
                 <h5>
                   Dimulai pukul 6 pagi, nikmati pemandangan kota di pagi hari

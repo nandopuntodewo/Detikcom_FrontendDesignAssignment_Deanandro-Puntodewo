@@ -33,6 +33,17 @@ const Home = () => {
             fontStyle: "normal",
             fontWeight: 600,
             lineHeight: "normal",
+            transition: "background-color 0.3s ease, box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = "#FFA500";
+            e.target.style.boxShadow =
+              "0px 18px 40px 12px rgba(255, 180, 0, 0.5)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = "#FFC73C";
+            e.target.style.boxShadow =
+              "0px 18px 40px 12px rgba(255, 211, 103, 0.35)";
           }}
         >
           TENTANG ACARA

@@ -25,6 +25,8 @@
   margin-left: 5%;
 } */
 
+
+
 .box1 {
   width: 100%;
   height: 100%;
@@ -63,12 +65,22 @@
 
 .peta {
   align-self: center;
-  margin-top: 5%;
-  width: 90%;
-  height: 70%;
+  margin-top: 8%;
+  width: 100%;
+  height: auto;
   margin-bottom: 15px;
-  /* Jarak antara gambar dan teks */
 }
+.zoom-effect {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.zoom-effect:hover .peta {
+  transform: scale(1.1); /* Efek zoom pada hover */
+  transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+
 
 .box2 {
   width: 100%;
@@ -188,7 +200,15 @@
   border: none;
   color: #fff;
   font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animasi transisi warna dan shadow */
+  box-shadow: 0px 18px 40px 12px rgba(255, 211, 103, 0.35); /* Bayangan default */
 }
+
+.daftar-button:hover {
+  background-color: #ffa500; /* Warna yang berubah saat dihover */
+  box-shadow: 0px 18px 40px 12px rgba(255, 180, 0, 0.5); /* Shadow yang berubah saat dihover */
+}
+
 
 .bg-custom-color {
   background-color: #28a997;
@@ -355,10 +375,14 @@
 .nav-artikel {
   display: flex;
   border-radius: 50px;
-  width: 17%;
+  width: 20%;
+  height: 100%;
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
 }
 
 .nav-artikel a {
